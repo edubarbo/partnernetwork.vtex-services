@@ -1,0 +1,10 @@
+{
+  "admin.app.partner-list": {
+    "component": "PartnerListWrapper",
+    "render": "client"
+  },
+  "admin.app.partner-details": {
+    "component": "PartnerDetailsWrapper",
+    "render": "client"
+  }
+}

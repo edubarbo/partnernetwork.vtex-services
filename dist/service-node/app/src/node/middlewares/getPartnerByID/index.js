@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getPartnerByID = void 0;
+// Utils
+const index_1 = require("./../../utils/getPartnerById/index");
+async function getPartnerByID(ctx) {
+    const { partnerID } = ctx.body;
+    const partnerDocument = await index_1.getPartnerById(partnerID, ctx);
+    if (!partnerDocument)
+        return;
+    ctx.state.partner = partnerDocument;
+    ctx.state.account = partnerDocument.account;
+}
+exports.getPartnerByID = getPartnerByID;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi8uLi8uLi9zcmMvbm9kZS9taWRkbGV3YXJlcy9nZXRQYXJ0bmVyQnlJRC9pbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQSxRQUFRO0FBQ1IsOERBQXlGO0FBRWxGLEtBQUssVUFBVSxjQUFjLENBQUMsR0FBdUI7SUFDMUQsTUFBTSxFQUFFLFNBQVMsRUFBRSxHQUFHLEdBQUcsQ0FBQyxJQUFJLENBQUE7SUFFOUIsTUFBTSxlQUFlLEdBQUcsTUFBTSxzQkFBa0IsQ0FBQyxTQUFTLEVBQUUsR0FBRyxDQUFDLENBQUE7SUFFaEUsSUFBSSxDQUFDLGVBQWU7UUFBRSxPQUFNO0lBRTVCLEdBQUcsQ0FBQyxLQUFLLENBQUMsT0FBTyxHQUFHLGVBQWUsQ0FBQTtJQUNuQyxHQUFHLENBQUMsS0FBSyxDQUFDLE9BQU8sR0FBRyxlQUFlLENBQUMsT0FBTyxDQUFBO0FBQzdDLENBQUM7QUFURCx3Q0FTQyIsInNvdXJjZXNDb250ZW50IjpbIi8vIFV0aWxzXG5pbXBvcnQgeyBnZXRQYXJ0bmVyQnlJZCBhcyBnZXRQYXJ0bmVyQnlJZFV0aWwgfSBmcm9tICcuLy4uLy4uL3V0aWxzL2dldFBhcnRuZXJCeUlkL2luZGV4J1xuXG5leHBvcnQgYXN5bmMgZnVuY3Rpb24gZ2V0UGFydG5lckJ5SUQoY3R4OiBDdXN0b21FdmVudENvbnRleHQpIHtcbiAgY29uc3QgeyBwYXJ0bmVySUQgfSA9IGN0eC5ib2R5XG5cbiAgY29uc3QgcGFydG5lckRvY3VtZW50ID0gYXdhaXQgZ2V0UGFydG5lckJ5SWRVdGlsKHBhcnRuZXJJRCwgY3R4KVxuXG4gIGlmICghcGFydG5lckRvY3VtZW50KSByZXR1cm5cblxuICBjdHguc3RhdGUucGFydG5lciA9IHBhcnRuZXJEb2N1bWVudFxuICBjdHguc3RhdGUuYWNjb3VudCA9IHBhcnRuZXJEb2N1bWVudC5hY2NvdW50XG59XG4iXX0=

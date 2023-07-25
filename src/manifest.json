@@ -1,0 +1,115 @@
+{
+  "name": "vtex-services",
+  "vendor": "partnernetwork",
+  "version": "1.6.6",
+  "title": "Partner network services (VTEX)",
+  "description": "Partner network services (VTEX)",
+  "dependencies": {
+    "vtex.messages": "1.x",
+    "vtex.catalog-api-proxy": "0.x",
+    "vtex.rewriter": "1.x",
+    "vtex.styleguide": "9.x",
+    "vtex.render-runtime": "8.x",
+    "vtex.formatted-price": "0.x"
+  },
+  "builders": {
+    "react": "3.x",
+    "node": "6.x",
+    "admin": "0.x",
+    "docs": "0.x",
+    "messages": "1.x",
+    "graphql": "1.x"
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "graphql-query"
+    },
+    {
+      "name": "vtex.catalog-api-proxy:catalog-proxy"
+    },
+    {
+      "name": "vtex.catalog-api-proxy:authenticated-catalog-proxy"
+    },
+    {
+      "name": "modify_prices"
+    },
+    {
+      "name": "LogisticsAdmin"
+    },
+    {
+      "name": "send-message"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/api/catalog_system/*"
+      }
+    },
+    {
+      "name": "vtex.rewriter:resolve-graphql"
+    },
+    {
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "/api/segments/*"
+      },
+      "name": "outbound-access"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/api/dataentites/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/api/catalog/pvt/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/{{account}}/pricing/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/api/logistics/pvt/inventory/skus/*"
+      }
+    },
+    {
+      "name": "POWER_USER_CRM"
+    },
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "POWER_USER_DS"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "mailservice.vtex.com.br",
+        "path": "/api/mail-service/pvt/sendmail"
+      }
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

@@ -1,0 +1,73 @@
+{
+  "graphqlPrivate1": {
+    "handler": "vtex.graphql-server@1.x/graphql",
+    "headers": {},
+    "path": "/_v/private/graphql/v1",
+    "public": true,
+    "version": "1.0.1",
+    "releasedAt": 1617129790309
+  },
+  "graphqlPublic1": {
+    "handler": "vtex.graphql-server@1.x/graphql",
+    "headers": {},
+    "path": "/_v/public/graphql/v1",
+    "public": true,
+    "version": "1.0.1",
+    "releasedAt": 1617129790309
+  },
+  "graphqlSegment1": {
+    "handler": "vtex.graphql-server@1.x/graphql",
+    "headers": {},
+    "path": "/_v/segment/graphql/v1",
+    "public": true,
+    "version": "1.0.1",
+    "releasedAt": 1617129790309
+  },
+  "/admin/app/partners": {
+    "handler": "vtex.render-server/render",
+    "headers": {
+      "x-vtex-render-domain": "admin",
+      "x-vtex-render-path-id": "/admin/app/partners"
+    },
+    "path": "/admin/app/partners",
+    "public": true,
+    "rootOnly": true,
+    "version": "1.0.1",
+    "releasedAt": 1617129790309
+  },
+  "/admin/app/partners/:p4": {
+    "handler": "vtex.render-server/render",
+    "headers": {
+      "x-vtex-render-domain": "admin",
+      "x-vtex-render-path-id": "/admin/app/partners/:p4"
+    },
+    "path": "/admin/app/partners/:p4",
+    "public": true,
+    "rootOnly": true,
+    "version": "1.0.1",
+    "releasedAt": 1617129790309
+  },
+  "__graphql": {
+    "path": "/_v/graphql",
+    "version": "1.0.1",
+    "releasedAt": 1617129790309
+  },
+  "approve": {
+    "path": "/approve",
+    "public": true,
+    "version": "1.0.1",
+    "releasedAt": 1617129790309
+  },
+  "sendContactEmail": {
+    "path": "/_v/api/sendContactEmail",
+    "public": true,
+    "version": "1.1.0",
+    "releasedAt": 1626797968095
+  },
+  "badge": {
+    "path": "/_v/badge",
+    "public": true,
+    "version": "1.6.0",
+    "releasedAt": 1629143109020
+  }
+}

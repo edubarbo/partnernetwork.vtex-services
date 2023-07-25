@@ -1,0 +1,122 @@
+enum Status {
+  PENDING
+  DENIED
+  PROCESSING
+  APPROVED
+}
+
+input CategoryInput {
+  id: ID
+  name: String
+}
+
+type Category {
+  id: ID
+  name: String
+}
+
+input SubcategoriesInput {
+  categoryID: ID
+  subcategories: [CategoryInput]
+}
+
+type Subcategories {
+  categoryID: ID
+  subcategories: [Category]
+}
+
+input PartnerInput {
+  name: String
+  email: String
+  imgFile: Upload
+  account: String
+  website: String
+  types: [String!]
+  regions: [String!]
+  description: String
+  categories: [CategoryInput!]
+  subcategories: [SubcategoriesInput!]
+}
+
+type Partner {
+  id: ID
+  name: String
+  email: String
+  status: Status
+  imgURL: String
+  website: String
+  account: String
+  types: [String!]!
+  regions: [String!]!
+  description: String
+  categories: [Category!]
+  subcategories: [Subcategories!]
+}
+
+input ServiceInput {
+  id: ID
+  name: String
+  isActive: Boolean
+  isRemoved: Boolean
+  description: String
+}
+
+type Service {
+  id: ID
+  name: String
+  partnerID: ID
+  isActive: Boolean
+  isRemoved: Boolean
+  description: String
+}
+
+input ClientInput {
+  id: ID
+  name: String
+  imgFile: Upload
+  isActive: Boolean
+  isRemoved: Boolean
+  description: String
+  accountName: String
+}
+
+type Client {
+  id: ID
+  name: String
+  partnerID: ID
+  imgURL: String
+  isActive: Boolean
+  isRemoved: Boolean
+  description: String
+  accountName: String
+}
+
+type PaginationInfo {
+  page: Int
+  total: Int
+  pageSize: Int
+}
+
+type PartnersWithPaginationInfo {
+  partners: [Partner]
+  pagination: PaginationInfo
+}
+
+type Query {
+  partner(account: String): Partner
+  partnersWithPaginationInfo(page: Int, pageSize: Int, status: Status!): PartnersWithPaginationInfo
+  service(id: ID, locale: String): Service
+  services(partnerID: ID): [Service]
+  client(id: ID, locale: String): Client
+  clients(partnerID: ID): [Client]
+}
+
+type Mutation {
+  savePartner(input: PartnerInput): Partner
+  createService(partnerID: ID, input: ServiceInput): Service
+  updateService(id: ID, input: ServiceInput): Service
+  saveServices(partnerID: ID, services: [ServiceInput!]): [Service]
+  createClient(partnerID: ID, input: ClientInput): Client
+  updateClient(id: ID, input: ClientInput): Client
+  saveClients(partnerID: ID, clients: [ClientInput!]): [Client]
+}

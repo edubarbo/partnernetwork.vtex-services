@@ -1,0 +1,8 @@
+{
+  "admin.app.partner-list": {
+    "path": "/admin/app/partners"
+  },
+  "admin.app.partner-details": {
+    "path": "/admin/app/partners/:account"
+  }
+}

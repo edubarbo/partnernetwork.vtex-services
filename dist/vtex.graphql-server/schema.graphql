@@ -1,0 +1,122 @@
+enum partnernetwork_vtexservices_1_6_6_Status @from(app: "partnernetwork.vtex-services@1.6.6") {
+  PENDING
+  DENIED
+  PROCESSING
+  APPROVED
+}
+
+input partnernetwork_vtexservices_1_6_6_CategoryInput @from(app: "partnernetwork.vtex-services@1.6.6") {
+  partnernetwork_vtexservices_1_6_6_id: ID @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_name: String @from(app: "partnernetwork.vtex-services@1.6.6")
+}
+
+type partnernetwork_vtexservices_1_6_6_Category @from(app: "partnernetwork.vtex-services@1.6.6") {
+  partnernetwork_vtexservices_1_6_6_id: ID @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_name: String @from(app: "partnernetwork.vtex-services@1.6.6")
+}
+
+input partnernetwork_vtexservices_1_6_6_SubcategoriesInput @from(app: "partnernetwork.vtex-services@1.6.6") {
+  partnernetwork_vtexservices_1_6_6_categoryID: ID @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_subcategories: [partnernetwork_vtexservices_1_6_6_CategoryInput] @from(app: "partnernetwork.vtex-services@1.6.6")
+}
+
+type partnernetwork_vtexservices_1_6_6_Subcategories @from(app: "partnernetwork.vtex-services@1.6.6") {
+  partnernetwork_vtexservices_1_6_6_categoryID: ID @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_subcategories: [partnernetwork_vtexservices_1_6_6_Category] @from(app: "partnernetwork.vtex-services@1.6.6")
+}
+
+input partnernetwork_vtexservices_1_6_6_PartnerInput @from(app: "partnernetwork.vtex-services@1.6.6") {
+  partnernetwork_vtexservices_1_6_6_name: String @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_email: String @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_imgFile: Upload @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_account: String @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_website: String @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_types: [String!] @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_regions: [String!] @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_description: String @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_categories: [partnernetwork_vtexservices_1_6_6_CategoryInput!] @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_subcategories: [partnernetwork_vtexservices_1_6_6_SubcategoriesInput!] @from(app: "partnernetwork.vtex-services@1.6.6")
+}
+
+type partnernetwork_vtexservices_1_6_6_Partner @from(app: "partnernetwork.vtex-services@1.6.6") {
+  partnernetwork_vtexservices_1_6_6_id: ID @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_name: String @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_email: String @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_status: partnernetwork_vtexservices_1_6_6_Status @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_imgURL: String @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_website: String @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_account: String @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_types: [String!]! @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_regions: [String!]! @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_description: String @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_categories: [partnernetwork_vtexservices_1_6_6_Category!] @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_subcategories: [partnernetwork_vtexservices_1_6_6_Subcategories!] @from(app: "partnernetwork.vtex-services@1.6.6")
+}
+
+input partnernetwork_vtexservices_1_6_6_ServiceInput @from(app: "partnernetwork.vtex-services@1.6.6") {
+  partnernetwork_vtexservices_1_6_6_id: ID @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_name: String @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_isActive: Boolean @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_isRemoved: Boolean @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_description: String @from(app: "partnernetwork.vtex-services@1.6.6")
+}
+
+type partnernetwork_vtexservices_1_6_6_Service @from(app: "partnernetwork.vtex-services@1.6.6") {
+  partnernetwork_vtexservices_1_6_6_id: ID @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_name: String @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_partnerID: ID @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_isActive: Boolean @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_isRemoved: Boolean @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_description: String @from(app: "partnernetwork.vtex-services@1.6.6")
+}
+
+input partnernetwork_vtexservices_1_6_6_ClientInput @from(app: "partnernetwork.vtex-services@1.6.6") {
+  partnernetwork_vtexservices_1_6_6_id: ID @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_name: String @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_imgFile: Upload @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_isActive: Boolean @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_isRemoved: Boolean @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_description: String @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_accountName: String @from(app: "partnernetwork.vtex-services@1.6.6")
+}
+
+type partnernetwork_vtexservices_1_6_6_Client @from(app: "partnernetwork.vtex-services@1.6.6") {
+  partnernetwork_vtexservices_1_6_6_id: ID @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_name: String @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_partnerID: ID @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_imgURL: String @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_isActive: Boolean @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_isRemoved: Boolean @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_description: String @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_accountName: String @from(app: "partnernetwork.vtex-services@1.6.6")
+}
+
+type partnernetwork_vtexservices_1_6_6_PaginationInfo @from(app: "partnernetwork.vtex-services@1.6.6") {
+  partnernetwork_vtexservices_1_6_6_page: Int @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_total: Int @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_pageSize: Int @from(app: "partnernetwork.vtex-services@1.6.6")
+}
+
+type partnernetwork_vtexservices_1_6_6_PartnersWithPaginationInfo @from(app: "partnernetwork.vtex-services@1.6.6") {
+  partnernetwork_vtexservices_1_6_6_partners: [partnernetwork_vtexservices_1_6_6_Partner] @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_pagination: partnernetwork_vtexservices_1_6_6_PaginationInfo @from(app: "partnernetwork.vtex-services@1.6.6")
+}
+
+type Query {
+  partnernetwork_vtexservices_1_6_6_partner(account: String @from(app: "partnernetwork.vtex-services@1.6.6")): partnernetwork_vtexservices_1_6_6_Partner @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_partnersWithPaginationInfo(page: Int @from(app: "partnernetwork.vtex-services@1.6.6"), pageSize: Int @from(app: "partnernetwork.vtex-services@1.6.6"), status: partnernetwork_vtexservices_1_6_6_Status! @from(app: "partnernetwork.vtex-services@1.6.6")): partnernetwork_vtexservices_1_6_6_PartnersWithPaginationInfo @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_service(id: ID @from(app: "partnernetwork.vtex-services@1.6.6"), locale: String @from(app: "partnernetwork.vtex-services@1.6.6")): partnernetwork_vtexservices_1_6_6_Service @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_services(partnerID: ID @from(app: "partnernetwork.vtex-services@1.6.6")): [partnernetwork_vtexservices_1_6_6_Service] @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_client(id: ID @from(app: "partnernetwork.vtex-services@1.6.6"), locale: String @from(app: "partnernetwork.vtex-services@1.6.6")): partnernetwork_vtexservices_1_6_6_Client @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_clients(partnerID: ID @from(app: "partnernetwork.vtex-services@1.6.6")): [partnernetwork_vtexservices_1_6_6_Client] @from(app: "partnernetwork.vtex-services@1.6.6")
+}
+
+type Mutation {
+  partnernetwork_vtexservices_1_6_6_savePartner(input: partnernetwork_vtexservices_1_6_6_PartnerInput @from(app: "partnernetwork.vtex-services@1.6.6")): partnernetwork_vtexservices_1_6_6_Partner @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_createService(partnerID: ID @from(app: "partnernetwork.vtex-services@1.6.6"), input: partnernetwork_vtexservices_1_6_6_ServiceInput @from(app: "partnernetwork.vtex-services@1.6.6")): partnernetwork_vtexservices_1_6_6_Service @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_updateService(id: ID @from(app: "partnernetwork.vtex-services@1.6.6"), input: partnernetwork_vtexservices_1_6_6_ServiceInput @from(app: "partnernetwork.vtex-services@1.6.6")): partnernetwork_vtexservices_1_6_6_Service @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_saveServices(partnerID: ID @from(app: "partnernetwork.vtex-services@1.6.6"), services: [partnernetwork_vtexservices_1_6_6_ServiceInput!] @from(app: "partnernetwork.vtex-services@1.6.6")): [partnernetwork_vtexservices_1_6_6_Service] @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_createClient(partnerID: ID @from(app: "partnernetwork.vtex-services@1.6.6"), input: partnernetwork_vtexservices_1_6_6_ClientInput @from(app: "partnernetwork.vtex-services@1.6.6")): partnernetwork_vtexservices_1_6_6_Client @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_updateClient(id: ID @from(app: "partnernetwork.vtex-services@1.6.6"), input: partnernetwork_vtexservices_1_6_6_ClientInput @from(app: "partnernetwork.vtex-services@1.6.6")): partnernetwork_vtexservices_1_6_6_Client @from(app: "partnernetwork.vtex-services@1.6.6")
+  partnernetwork_vtexservices_1_6_6_saveClients(partnerID: ID @from(app: "partnernetwork.vtex-services@1.6.6"), clients: [partnernetwork_vtexservices_1_6_6_ClientInput!] @from(app: "partnernetwork.vtex-services@1.6.6")): [partnernetwork_vtexservices_1_6_6_Client] @from(app: "partnernetwork.vtex-services@1.6.6")
+}

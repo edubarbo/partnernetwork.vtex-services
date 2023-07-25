@@ -1,0 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GroupData = void 0;
+const GroupData = {
+    // CategoryID: null,
+    Name: 'Specifications',
+};
+exports.GroupData = GroupData;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi8uLi8uLi9zcmMvbm9kZS9kYXRhU291cmNlcy9ncm91cERhdGEvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsTUFBTSxTQUFTLEdBQUc7SUFDaEIsb0JBQW9CO0lBQ3BCLElBQUksRUFBRSxnQkFBZ0I7Q0FDdkIsQ0FBQTtBQVNRLDhCQUFTIiwic291cmNlc0NvbnRlbnQiOlsiY29uc3QgR3JvdXBEYXRhID0ge1xuICAvLyBDYXRlZ29yeUlEOiBudWxsLFxuICBOYW1lOiAnU3BlY2lmaWNhdGlvbnMnLFxufVxuXG5leHBvcnQgaW50ZXJmYWNlIElHcm91cFJlc3BvbnNlIHtcbiAgLy8gQ2F0ZWdvcnlJZDogbnVtYmVyXG4gIElkOiBudW1iZXJcbiAgTmFtZTogc3RyaW5nXG4gIFBvc2l0aW9uOiBudW1iZXJcbn1cblxuZXhwb3J0IHsgR3JvdXBEYXRhIH1cbiJdfQ==

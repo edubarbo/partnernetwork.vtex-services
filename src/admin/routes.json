@@ -1,0 +1,10 @@
+{
+  "admin.app.partner-list": {
+    "component": "PartnerListWrapper",
+    "path": "/admin/app/partners"
+  },
+  "admin.app.partner-details": {
+    "component": "PartnerDetailsWrapper",
+    "path": "/admin/app/partners/:account"
+  }
+}
