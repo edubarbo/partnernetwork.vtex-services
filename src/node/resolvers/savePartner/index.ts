@@ -55,7 +55,7 @@ const saveAttachment = async (
 
 export const savePartner = async (_: any, { input }: Args, ctx: Context) => {
 
-  console.log({ input })
+  //console.log({ input })//TODO: Retirar
 
   const data = assign(input, {
     types: JSON.stringify(input.types),
@@ -67,8 +67,10 @@ export const savePartner = async (_: any, { input }: Args, ctx: Context) => {
   const document = await getPartner(input.account, ctx)
 
   let documentId
+  console.log({ ...data })//TODO: Retirar
 
   if (!document) {
+    console.log({ ...data })//TODO: Retirar
     const response = await ctx.clients.masterdata.createDocument({
       dataEntity: 'PN',
       fields: {

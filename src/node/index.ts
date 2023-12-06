@@ -28,7 +28,7 @@ import resolvers from './resolvers'
 // Clients
 import { Clients } from './clients'
 
-const TREE_SECONDS_MS = 3 * 1000
+const TREE_SECONDS_MS = 60 * 1000
 
 declare global {
   // The shape of our State object found in `ctx.state`.

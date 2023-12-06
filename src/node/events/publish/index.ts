@@ -7,6 +7,7 @@ import { updateProductSpecification } from '../../middlewares/updateProductSpeci
 import { addPriceToSKU } from '../../middlewares/addPriceToSKU'
 import { activateSKU } from '../../middlewares/activateSKU'
 
+//TODO: Função responsável por criar os produtos no catálogo, alterar para contemplar o novo campo de categoria
 export async function publish(
   ctx: CustomEventContext,
   next: () => Promise<any>

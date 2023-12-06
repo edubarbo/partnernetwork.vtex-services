@@ -1,7 +1,7 @@
 {
   "name": "vtex-services",
   "vendor": "partnernetwork",
-  "version": "1.6.6",
+  "version": "1.7.1-beta1",
   "title": "Partner network services (VTEX)",
   "description": "Partner network services (VTEX)",
   "dependencies": {

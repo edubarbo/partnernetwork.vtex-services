@@ -1,12 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // Dependencies
 import React, { useState, useEffect } from 'react'
-import { Input, Textarea, CheckboxGroup } from 'vtex.styleguide'
+import { Input, Textarea, CheckboxGroup, Dropdown } from 'vtex.styleguide'
 
 // Data
 import countries from './countries'
 import partnerTypes from './partnerTypes'
 import { categories } from './categories'
+import { mainCategories } from './maincategories'
 
 // Components
 import Select from '../../components/Select'
@@ -50,6 +51,7 @@ interface PartnerDataProps {
 }
 
 const PartnerData: React.FC<PartnerDataProps> = ({ data, currentStatus }) => {
+  console.log("batata",data)
   const [categoriesCheckboxes, setCategoriesCheckboxes] = useState<
     CategoriesCheckboxes
   >(categoriesInitialState)
@@ -163,6 +165,16 @@ const PartnerData: React.FC<PartnerDataProps> = ({ data, currentStatus }) => {
         <h3 className="t-heading-3">About the partner</h3>
 
         <Textarea disabled resize="none" value={data.description} />
+      </div>
+
+      <div className="mb7 about-the-partner">
+        <h3 className="t-heading-3">Main Category</h3>
+
+        <Dropdown 
+            disabled
+            options={mainCategories}
+            value={data.mainCategoryId}
+          />
       </div>
 
       <div className="mb7 about-the-partner">

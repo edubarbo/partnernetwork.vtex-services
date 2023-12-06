@@ -25,7 +25,7 @@ export async function createOrUpdateProduct(ctx: CustomEventContext) {
     TaxCode: '',
     BrandId: 2000000,
     DepartmentId: 1,
-    CategoryId: 1,
+    CategoryId: parseInt(partner.mainCategoryId),
     Score: 1,
     SupplierId: 1,
     AdWordsRemarketingCode: null,

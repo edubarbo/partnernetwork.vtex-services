@@ -27,6 +27,7 @@ export const getPartner: GetPartner = async (account, ctx) => {
       'description',
       'types',
       'regions',
+      'mainCategoryId',
       'categories',
       'subcategories',
     ],

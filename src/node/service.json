@@ -1,7 +1,7 @@
 {
-  "memory": 128,
+  "memory": 256,
   "ttl": 10,
-  "timeout": 2,
+  "timeout": 60,
   "minReplicas": 2,
   "maxReplicas": 10,
   "workers": 4,
@@ -22,6 +22,10 @@
     },
     "badge": {
       "path": "/_v/badge",
+      "public": true
+    },
+    "playground": {
+      "path": "/_v/playground",
       "public": true
     }
   }

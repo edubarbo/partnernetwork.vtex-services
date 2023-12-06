@@ -32,6 +32,7 @@ interface IPartnerData extends ICommonFields {
   categories: ICategory[]
   subcategories: ISubcategories[]
   status: 'PENDING' | 'DENIED' | 'PROCESSING' | 'APPROVED' | string
+  mainCategoryId: string
 }
 
 interface ISelectOption {
