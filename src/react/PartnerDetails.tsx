@@ -9,7 +9,7 @@ import axios from 'axios'
 // Containers
 import PartnerData from './containers/PartnerData'
 import PartnerClients from './containers/PartnerClients'
-import PartnerServices from './containers/PartnerServices'
+//import PartnerServices from './containers/PartnerServices'
 import DenyModal from './components/DenyModal'
 
 const partnerQuery = gql`
@@ -36,6 +36,7 @@ const partnerQuery = gql`
           name
         }
       }
+      mainCategoryId
     }
   }
 `
@@ -120,7 +121,7 @@ const PartnerDetails: React.FC = () => {
           </PageBlock>
         </Tab>
 
-        <Tab
+        {/*<Tab
           label="Services"
           active={currentTab === 1}
           disabled={!data.partner.id}
@@ -129,7 +130,7 @@ const PartnerDetails: React.FC = () => {
           <PageBlock variation="full">
             <PartnerServices partnerID={data.partner.id} />
           </PageBlock>
-        </Tab>
+  </Tab>*/}
 
         <Tab
           label="Clients"

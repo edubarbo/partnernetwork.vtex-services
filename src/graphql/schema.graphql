@@ -36,6 +36,7 @@ input PartnerInput {
   description: String
   categories: [CategoryInput!]
   subcategories: [SubcategoriesInput!]
+  mainCategoryId: String
 }
 
 type Partner {
@@ -51,6 +52,7 @@ type Partner {
   description: String
   categories: [Category!]
   subcategories: [Subcategories!]
+  mainCategoryId: String
 }
 
 input ServiceInput {

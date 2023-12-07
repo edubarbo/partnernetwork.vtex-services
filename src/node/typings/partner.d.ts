@@ -20,4 +20,5 @@ export interface IPartner {
   categories: ICategory | string
   subcategories: ISubcategories | string
   status: 'PENDING' | 'DENIED' | 'PROCESSING' | 'APPROVED'
+  mainCategoryId: string
 }
